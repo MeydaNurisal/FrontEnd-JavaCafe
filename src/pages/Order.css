@@ -1,0 +1,211 @@
+
+.dashboard-container {
+    margin-left: 70px; /* Margin kiri saat sidebar ditutup */
+    transition: margin-left 0.3s ease; /* Animasi saat menggeser dashboard */
+    padding: 20px;
+  }
+  
+.card-container {
+    display: flex;
+    margin-left: 20px;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  
+  .card {
+    width: calc(25% - 20px);
+    width: 250px; /* Lebar card */
+    height: 118px; /* Tinggi card */
+    background-color: #D9D9D9; /* Warna latar belakang card */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 16px; /* Border radius card */
+    margin-left: 20px; /* Jarak antara setiap card */
+    
+  }
+  .card-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar.icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .card .icon {
+    font-size: 50px; /* Sesuaikan ukuran ikon sesuai kebutuhan */
+    margin-right: 10px;
+  }
+  .info {
+    display: flex;
+    justify-content: space-between; /* Agar info berada di sisi yang berlawanan */
+    align-items: center;
+    flex-grow: 1; /* Agar info bisa memenuhi sisa ruang yang tersedia */
+  }
+  .counter {
+    font-size: 30px;
+    margin-left: 160px;
+    font-weight: bold; /* Membuat nomor tebal */
+    text-align: left; /* Menggeser teks ke kanan */
+  }
+  
+  .description {
+    margin-top: 30px; /* Mengurangi jarak atas deskripsi */
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+  }
+  .card:last-child {
+    margin-right: 0; /* Hapus margin-right pada card terakhir */
+  }
+  
+  .recent-order-title {
+    margin-top: 40px;
+  }
+  
+  .order-table-wrapper {
+    border-radius: 10px; /* Menambahkan radius sudut di luar tabel */
+    overflow: hidden; /* Mengatasi kebocoran sudut di luar wrapper */
+  }
+  
+  .order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    
+  }
+  
+  .order-table th,
+  .order-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    
+  }
+  
+  .order-table th {
+    background-color: #8B4513;
+  }
+   
+  
+  .order-details-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999; /* Pastikan jendela detail order muncul di atas konten lain */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparent */
+    overflow: auto;
+  }
+
+  .order-details-content {
+    background-color: #d3d3d3;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Lebar konten detail order */
+    max-width: 600px; /* Batasi lebar maksimum */
+    border-radius: 10px; /* Agar sudut terlihat lebih halus */
+    position: relative; /* Agar dapat menggunakan posisi absolut di dalamnya */
+}
+
+.order-details-content h2 {
+  text-align: center;
+}
+
+.order-details-content p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.fa-icon {
+  font-size: 36px; /* Sesuaikan ukuran ikon sesuai kebutuhan */
+  color: #8B4513; /* Warna ikon */
+  border-radius: 50%; /* Membuat ikon menjadi lingkaran */
+  background-color: #D2B48C; /* Warna latar belakang ikon */
+  padding: 10px; /* Ruang di dalam ikon */
+  cursor: pointer; /* Ubah kursor saat dihover */
+  transition: background-color 0.3s ease; /* Transisi untuk efek hover */
+}
+
+.fa-icon:hover {
+  background-color: #6A351E; /* Warna latar belakang ikon saat dihover */
+}
+
+.close-detail-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+/* Order.css */
+
+/* CSS untuk merapikan tabel detail order */
+.order-details-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.order-details-content th,
+.order-details-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.order-details-content th {
+  background-color: #8B4513;
+  color: #fff;
+}
+
+.order-details-content td {
+  background-color: #f2f2f2;
+}
+
+/* CSS untuk merapikan tabel menu yang dipesan */
+.order-details-content .menu-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.order-details-content .menu-table th,
+.order-details-content .menu-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.order-details-content .menu-table th {
+  background-color: #8B4513;
+  color: #fff;
+}
+
+.order-details-content .menu-table td {
+  background-color: #f2f2f2;
+}
+
+  
+  @media (max-width: 768px) {
+    .dashboard-container {
+      margin-left: 0; /* Saat layar kecil, dashboard tidak bergeser */
+    }
+  }
+  

@@ -1,0 +1,115 @@
+/* Dashboard.css */
+
+.dashboard-container {
+    margin-left: 70px; /* Margin kiri saat sidebar ditutup */
+    transition: margin-left 0.3s ease; /* Animasi saat menggeser dashboard */
+    padding: 20px;
+  }
+  
+  .card-container {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .card {
+    width: calc(25% - 20px);
+    width: 250px; /* Lebar card */
+    height: 118px; /* Tinggi card */
+    background-color: #D9D9D9; /* Warna latar belakang card */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 16px; /* Border radius card */
+    margin-right: 10px; /* Jarak antara setiap card */
+  }
+  .card-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar.icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .card .icon {
+    font-size: 50px; /* Sesuaikan ukuran ikon sesuai kebutuhan */
+    margin-right: 10px;
+  }
+  .info {
+    display: flex;
+    justify-content: space-between; /* Agar info berada di sisi yang berlawanan */
+    align-items: center;
+    flex-grow: 1; /* Agar info bisa memenuhi sisa ruang yang tersedia */
+  }
+  .counter {
+    font-size: 30px;
+    margin-left: 160px;
+    font-weight: bold; /* Membuat nomor tebal */
+    text-align: left; /* Menggeser teks ke kanan */
+  }
+  
+  .description {
+    margin-top: 30px; /* Mengurangi jarak atas deskripsi */
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+  }
+  .card:last-child {
+    margin-right: 0; /* Hapus margin-right pada card terakhir */
+  }
+  
+  .recent-order-title {
+    margin-top: 40px;
+  }
+  
+  .order-table-wrapper {
+    border-radius: 10px; /* Menambahkan radius sudut di luar tabel */
+    overflow: hidden; /* Mengatasi kebocoran sudut di luar wrapper */
+  }
+  
+  
+  
+  .order-dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px; /* Tambahkan radius ke tabel */
+    overflow: hidden; /* Agar radius terlihat di bagian bawah */
+  }
+  
+  .order-dashboard-table th,
+  .order-dashboard-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .order-dashboard-table th {
+    background-color: #8B4513;
+  }
+  
+  /* Gaya untuk tombol "Done" */
+  button.done-button {
+    background-color: green; /* Warna latar belakang hijau */
+    color: white; /* Warna teks putih */
+    border: none; /* Hapus border */
+    border-radius: 4px; /* Tambahkan radius sudut */
+    padding: 8px 16px; /* Padding untuk ruang di dalam tombol */
+    cursor: pointer; /* Ubah kursor saat dihover */
+    transition: background-color 0.3s ease; /* Transisi untuk efek hover */
+  }
+  
+  /* Gaya saat tombol "Done" dihover */
+  button.done-button:hover {
+    background-color: darkgreen; /* Warna latar belakang sedikit lebih gelap saat dihover */
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-container {
+      margin-left: 0; /* Saat layar kecil, dashboard tidak bergeser */
+    }
+  }
+  
